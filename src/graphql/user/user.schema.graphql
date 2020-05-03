@@ -1,0 +1,41 @@
+###########################
+## USER SCHEMA
+############################
+union UserResult = User | AuthError
+union UserAuthResult = UserTokenResult | AuthError
+
+type Query {
+  user: UserResult!
+  getUserAuthToken(data: UserAuthInput!): UserAuthResult!
+}
+
+type Mutation {
+  createUser(data: CreateUserInput!): UserAuthResult!
+}
+
+type User {
+  id: ID!
+  email: String!
+  verifyEmailToken: String
+  firstName: String!
+  lastName: String
+}
+
+# for logging user in
+input UserAuthInput {
+  email: String!
+  password: String!
+}
+
+# for creating new user
+input CreateUserInput {
+  email: String!
+  password: String!
+}
+
+# token results returned after a user is successfully created
+# or authenticated
+type UserTokenResult {
+  token: String!
+  user: User!
+}

@@ -14,10 +14,12 @@
     "outDir": "lib",
     "baseUrl": ".",
     "paths": {
-      "@modules/*": ["./src/graphql/modules/*"],
-      "@shared/*": ["./src/graphql/shared/*"]
+      "@common/*": ["./src/common/*"],
+      "@generated/*": ["./src/generated/*"],
+      "@graphql/*": ["./src/graphql/*"],
+      "@websocket/*": ["src/websocket/*"]
     }
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/graphql/schema.js"],
   "exclude": ["node_modules/**/*", ".serverless/**/*", ".webpack/**/*", "_warmup/**/*", ".vscode/**/*"]
 }

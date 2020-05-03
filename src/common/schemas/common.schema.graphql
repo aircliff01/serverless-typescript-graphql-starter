@@ -1,0 +1,26 @@
+###########################
+## COMMON SCHEMA
+############################
+
+scalar Date
+
+input PaginationInput {
+  take: Int
+  skip: Int
+}
+
+interface GQLError {
+  message: String!
+}
+
+type AuthError implements GQLError {
+  message: String!
+}
+
+type NotFound implements GQLError {
+  message: String!
+}
+
+type InternalError implements GQLError {
+  message: String!
+}
