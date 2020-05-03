@@ -1,0 +1,10 @@
+-- USER TABLE
+CREATE TABLE users (
+  id VARCHAR(36) NOT NULL,
+  email VARCHAR(355) NOT NULL UNIQUE,
+  password TEXT NOT NULL,
+  verifyEmailToken VARCHAR(36) UNIQUE,
+  createDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+  INDEX(email),
+  PRIMARY KEY (id)
+);
