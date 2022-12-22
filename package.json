@@ -20,7 +20,7 @@
     "data-api-client": "^1.0.1",
     "graphql": "^14.6.0",
     "graphql-import-node": "0.0.4",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "merge-graphql-schemas": "^1.7.6",
     "reflect-metadata": "^0.1.13",
     "source-map-support": "^0.5.10",
